@@ -1,43 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio - Diego Sánchez Ek</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/@headlessui/react@latest/dist/headlessui.umd.production.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-indigo-600 text-white py-6 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto text-center fade-in">
+      <h1 class="text-4xl font-extrabold">Diego Sánchez Ek</h1>
+      <p class="text-lg mt-2">TSU en Desarrollo de Software Multiplataforma</p>
+    </div>
+  </header>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <main class="container mx-auto px-4 py-10 space-y-14">
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Experiencia</h2>
+      <ul class="list-disc pl-5 space-y-2 text-lg">
+        <li>Desarrollo de Aplicaciones Web y APIs con .NET</li>
+        <li>Diseño e implementación de API RESTful</li>
+        <li>Microservicios con Docker</li>
+        <li>Integración de APIs de terceros</li>
+        <li>Desarrollo en ASP.NET y .NET Core</li>
+        <li>Conocimientos básicos en Angular</li>
+      </ul>
+    </section>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Bases de Datos y Servicios en la Nube</h2>
+      <ul class="list-disc pl-5 space-y-2 text-lg">
+        <li>MySQL, SQL Server, PostgreSQL</li>
+        <li>Diseño y desarrollo de bases de datos SQL</li>
+        <li>Servicios Azure</li>
+      </ul>
+    </section>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Optimización y Escalabilidad</h2>
+      <ul class="list-disc pl-5 space-y-2 text-lg">
+        <li>Escalabilidad con Docker</li>
+        <li>Pruebas automatizadas</li>
+      </ul>
+    </section>
+
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Desarrollo Móvil</h2>
+      <ul class="list-disc pl-5 space-y-2 text-lg">
+        <li>Flutter y Dart</li>
+        <li>Integración de APIs</li>
+        <li>Optimización y escalabilidad</li>
+      </ul>
+    </section>
+
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Herramientas y Frameworks</h2>
+      <p class="text-lg">Visual Studio, VS Code, Azure DevOps, NodeJS, Flutter, GitHub</p>
+    </section>
+
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Certificados</h2>
+      <ul class="list-disc pl-5 space-y-2 text-lg">
+        <li>Scrum Foundation (CertiProf)</li>
+        <li>Introducción a redes - Cisco</li>
+        <li>Postman, SQL Server Management Studio, pgAdmin, Docker</li>
+      </ul>
+    </section>
+
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Proyectos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-4 bg-white shadow-md rounded-lg hover:scale-105 transform transition-all duration-300">
+          <h3 class="text-xl font-bold">Sistema de Gestión de Usuarios</h3>
+          <p>Aplicación con autenticación JWT y gestión de roles con ASP.NET Core.</p>
+        </div>
+        <div class="p-4 bg-white shadow-md rounded-lg hover:scale-105 transform transition-all duration-300">
+          <h3 class="text-xl font-bold">App móvil con Flutter</h3>
+          <p>App de gestión de tareas con integración de APIs REST y base de datos local.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Contacto</h2>
+      <p class="text-lg">Tel: 9997495334</p>
+      <p class="text-lg">Email: eksanchezdiego24@gmail.com</p>
+    </section>
+
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Habilidades Blandas</h2>
+      <p class="text-lg">Trabajo en equipo, Colaboración, Resolución de conflictos, Adaptabilidad, Inteligencia emocional, Gestión del tiempo, Responsabilidad</p>
+    </section>
+
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Lenguajes</h2>
+      <p class="text-lg"><strong>Programación:</strong> C#, Python, JavaScript, Dart</p>
+      <p class="text-lg"><strong>Bases de Datos:</strong> SQL, PL/SQL, T-SQL</p>
+    </section>
+
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Educación</h2>
+      <p class="text-lg">Universidad Tecnológica Metropolitana - TSU en Desarrollo de Software Multiplataforma (2023 - Actualmente)</p>
+    </section>
+
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Idiomas</h2>
+      <p class="text-lg">Español (Nativo), Inglés (A2)</p>
+    </section>
+  </main>
+
+  <footer class="bg-indigo-600 text-white text-center py-6 fade-in">
+    <p class="text-lg">&copy; 2025 Diego Sánchez Ek. Todos los derechos reservados.</p>
+  </footer>
+</body>
 </html>
