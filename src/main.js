@@ -1,4 +1,3 @@
-import './style.css';
 import { contactSection } from './components/contact.js';
 import { skillsSection } from './components/skills.js';
 import { programmingLanguagesSection } from './components/languages.js';
